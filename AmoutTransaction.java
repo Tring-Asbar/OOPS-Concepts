@@ -37,6 +37,9 @@ class Bank{
             System.out.print("Insufficient Balance");
         }
     }
+    public void display(){
+        System.out.print("All details are  displayed successfully");
+    }
 }
 public class AmoutTransaction {
     public static void main(String[] args){
@@ -47,6 +50,7 @@ public class AmoutTransaction {
         System.out.print("Balance is "+bank.getBalance());
         System.out.print("Account Number is "+bank.getAccno());
         System.out.println("Updated Balance is:"+bank.balance);
+        bank.display();
 
     }
 }

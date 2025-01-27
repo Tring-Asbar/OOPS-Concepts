@@ -25,7 +25,7 @@ class Bank{
             System.out.println("Balance is:"+balance);
         }
         else{
-            System.out.print("It cannot be Deposited");
+            System.out.println("It cannot be Deposited");
         }
     }
     public void withdraw(double amt){
@@ -34,11 +34,11 @@ class Bank{
             System.out.println("Balance is:"+balance);
         }
         else{
-            System.out.print("Insufficient Balance");
+            System.out.println("Insufficient Balance");
         }
     }
     public void display(){
-        System.out.print("All details are  displayed successfully");
+        System.out.println("All details are  displayed successfully");
     }
 }
 public class AmoutTransaction {
@@ -46,9 +46,9 @@ public class AmoutTransaction {
         Bank bank = new Bank("Asbar",1000.0,"23456789787");
         bank.deposit(500.0);
         bank.withdraw(100.0);
-        System.out.print("Name is "+bank.getName());
-        System.out.print("Balance is "+bank.getBalance());
-        System.out.print("Account Number is "+bank.getAccno());
+        System.out.println("Name is "+bank.getName());
+        System.out.println("Balance is "+bank.getBalance());
+        System.out.println("Account Number is "+bank.getAccno());
         System.out.println("Updated Balance is:"+bank.balance);
         bank.display();
 

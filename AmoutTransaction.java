@@ -1,7 +1,12 @@
-class Bank{
-    String name;
-    double balance;
-    String  accno;
+abstract class Transaction{
+    abstract void deposit(double amt);
+    abstract void withdraw(double amt);
+}
+
+class Bank extends Transaction{
+    private final String name;
+    private double balance;
+    private final String  accno;
     public Bank(String name,double balance,String accno){
         this.name=name;
         this.balance=balance;
@@ -19,6 +24,7 @@ class Bank{
         return accno;
     }
     
+    @Override
     public void deposit(double amt){
         if(amt>0){
             balance+=amt;
@@ -28,6 +34,8 @@ class Bank{
             System.out.println("It cannot be Deposited");
         }
     }
+
+    @Override
     public void withdraw(double amt){
         if(amt>0 && amt<=balance){
             balance-=amt;
@@ -49,7 +57,7 @@ public class AmoutTransaction {
         System.out.println("Name is "+bank.getName());
         System.out.println("Balance is "+bank.getBalance());
         System.out.println("Account Number is "+bank.getAccno());
-        System.out.println("Updated Balance is:"+bank.balance);
+        System.out.println("Updated Balance is:"+bank.getBalance());
         bank.display();
 
     }

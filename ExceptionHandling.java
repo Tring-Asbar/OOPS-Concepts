@@ -13,8 +13,10 @@ public class ExceptionHandling{
         }
     }
     public static void subtract(int a,int b) throws NegativeNumberException{
-            if(b>a)
-            throw new NegativeNumberException("Number is Negative");
+            if(b>a){
+                NegativeNumberException negativenumber = new NegativeNumberException("Number is Negative");    
+                throw negativenumber;
+            }
             else{
                 System.out.println(a-b);
             }

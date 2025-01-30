@@ -62,7 +62,6 @@ class Student{
 		System.out.println("Student Grade: "+grade);
 		System.out.println();
     }
-    
 }
 public class GradingSystem
 {
